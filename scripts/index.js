@@ -40,7 +40,7 @@ class Weather {
         // https://api.openweathermap.org/data/2.5/weather?q=lagos&appid=c765905bf9ec88f22af316e9698e709a
         const URL  = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=${KEY}`;
 
-        this.fetchData('GET', null, null, null, URL)
+        this.fetchData('GET', URL)
         .then(data => {
             console.log(data);
         })
