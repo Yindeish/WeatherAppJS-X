@@ -1,0 +1,178 @@
+/* Global Styles */
+:root {
+    font-size: 14px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/weather-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    outline: none;
+}
+
+/* Utilities */
+.f-centralize-block-xy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-centralize-block-y {
+    display: flex;
+    align-items: center;
+}
+
+/* Animations */
+.shake {
+    animation: shake .7s linear 0s infinite forwards;
+}
+
+@keyframes shake {
+    10% {
+        transform: rotate(75deg);
+    }
+    30% {
+        transform: rotate(120deg);
+    }
+    50% {
+        transform: rotate(75deg);
+    }
+    70% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Regular Styles */
+.container {
+    width: 80%;
+    height: 70vh;
+    margin: 5em auto;
+    border-radius: .4rem;
+    overflow: hidden;
+    flex-direction: column;
+    border: .5px solid white;
+}
+
+header {
+    width: 100%;
+    flex: .1;
+    flex-direction: column;
+    border-bottom: 2px solid grey;
+    background-color: white;
+    align-self: flex-start;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    padding: .3em 0em;
+}
+
+.search {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0em 1em;
+    background-color: white;
+}
+
+input {
+    flex: .9;
+    height: 100%;
+    padding: .3em .5em;
+    outline: none;
+    border: none;
+}
+
+button {
+    flex: .1;
+    height: 100%;
+    align-self: center;
+    padding: .3em;
+    background-color: grey;
+    border: none;
+    transform: scale(1);
+    transition: .25s all linear;
+}
+
+button:active {
+    transform: scale(.8);
+}
+
+button svg {
+    display: none;
+    fill: white;
+}
+
+button svg.active {
+    display: inline-block;
+}
+
+.inactive {
+    display: none;
+    width: 100%;
+    flex: .9;
+    background-color: transparent;   
+}
+
+.city-weather-details {
+    flex: .9;
+    width: 100%;
+    background-color: transparent;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em 0em 2em;
+}
+
+.icon-wrapper {
+    width: 100px;
+    height: 100px;
+}
+
+.details-wrapper {
+    flex-direction: column;
+    gap: .5em;
+}
+
+.details-wrapper > * {
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.details-wrapper h1 {
+    padding: 0em;
+}
+
+.show-f {
+    display: flex;
+}
+
+.show-b {
+    display: block;
+}
+
+
