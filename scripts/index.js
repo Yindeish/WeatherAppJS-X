@@ -53,8 +53,9 @@ class Weather {
     async fetchData(method, url= null, key = null, host = null, other = null) {
         return new Promise((resolve, reject) => {
             const xhr  =  new XMLHttpRequest();
-            xhr.withCredentials = true;
+            // xhr.withCredentials = true;
             xhr.responseType = 'json';
+            xhr.setRequestHeader("accept", "*/*");
 
             if( other ) {
                 const { url } = other;
