@@ -55,11 +55,12 @@ class Weather {
             const xhr  =  new XMLHttpRequest();
             // xhr.withCredentials = true;
             xhr.responseType = 'json';
-            xhr.setRequestHeader("accept", "*/*");
+            
 
             if( other ) {
                 const { url } = other;
                 xhr.open(method, url);
+                xhr.setRequestHeader("accept", "*/*");
             } else {
                 xhr.open(method, url);
                 xhr.setRequestHeader("X-RapidAPI-Key", key);
