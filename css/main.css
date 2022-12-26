@@ -147,13 +147,14 @@ button svg.active {
     background-color: transparent;
     display: none;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 3em;
     padding: 1em 0em 2em;
 }
 
 .icon-wrapper {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
 }
 
 .details-wrapper {
@@ -169,6 +170,7 @@ button svg.active {
 
 .details-wrapper h1 {
     padding: 0em;
+    font-size: 3.5rem;
 }
 
 .error-block {
@@ -194,4 +196,9 @@ button svg.active {
     display: block;
 }
 
-
+/* Media Queries */
+@media screen and (min-width: 768px) {
+    .container {
+        width: 50%;
+    }
+}
