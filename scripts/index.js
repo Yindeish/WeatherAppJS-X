@@ -18,8 +18,8 @@ class Weather {
         if( this.searchBtn.classList.contains('active') ) {
             console.log('searching...');
 
-            // this.useRapidAPI();
-            this.useOpenWeatherAPI();
+            this.useRapidAPI();
+            // this.useOpenWeatherAPI();
         }
         
     }
@@ -53,7 +53,7 @@ class Weather {
     async fetchData(method, url= null, key = null, host = null, other = null) {
         return new Promise((resolve, reject) => {
             const xhr  =  new XMLHttpRequest();
-            // xhr.withCredentials = true;
+            xhr.withCredentials = true;
             xhr.responseType = 'json';
             
 
@@ -61,11 +61,14 @@ class Weather {
                 const { url } = other;
                 xhr.open(method, url);
                 xhr.setRequestHeader("accept", "*/*");
-            } else {
+            } 
+
+             else {
                 xhr.open(method, url);
                 xhr.setRequestHeader("X-RapidAPI-Key", key);
                 xhr.setRequestHeader("X-RapidAPI-Host", host);
             }
+
             xhr.onload = () => {
                 if (xhr.status == 200) {
                     resolve(xhr.response);
@@ -78,6 +81,7 @@ class Weather {
             }
 
             xhr.send();
+           
         })
     }
 
@@ -156,23 +160,6 @@ class Weather {
             console.log(err);
         })
 
-         // const req  = new XMLHttpRequest();
-        // req.open('GET', weatherURL);
-        // req.withCredentials = true;
-        // req.responseType = 'json';
-
-        // req.onload = () => {
-        //     if( req.status == 200 ) {
-        //         console.log(req.response, 'good res');
-        //     } else {
-        //         console.log(req.response, 'bad res');
-        //     }
-        // }
-        // req.onerror = () => {
-        //     console.log(req.response);
-        // }
-
-        // req.send();
         // this.renderUI()
 
     }
