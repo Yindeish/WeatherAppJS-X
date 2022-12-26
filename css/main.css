@@ -1,3 +1,6 @@
+/* Fonts */
+@import url('./fonts/rubik.css');
+
 /* Global Styles */
 :root {
     font-size: 14px;
@@ -7,6 +10,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-family: 'Rubik';
 }
 
 html {
@@ -165,6 +169,21 @@ button svg.active {
 
 .details-wrapper h1 {
     padding: 0em;
+}
+
+.error-block {
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    padding: 2em 1em;
+    background-color: white;
+    color: red;
+}
+
+.error-block * {
+    text-align: center;
 }
 
 .show-f {
